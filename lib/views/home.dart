@@ -41,7 +41,7 @@ class _HomeState extends State<Home> {
       home: Scaffold(
         appBar: AppBar(
           backgroundColor: Colors.indigo,
-          title: Text('PUE-ER EMIS'),
+          title: Text('Peu-ER EMIS'),
 //          leading: Image(
 //            image: AssetImage('assets/plogo.png'),
 //          ),
