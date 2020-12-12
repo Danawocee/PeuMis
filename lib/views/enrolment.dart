@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
 import 'package:peumis/controllers/constant.dart';
 
 import 'package:peumis/controllers/loading.dart';
@@ -85,7 +85,8 @@ class _EnrolmentState extends State<Enrolment> {
                                                     labelText: "Class",
                                                     labelStyle: TextStyle(
                                                         fontFamily: 'pangolin',
-                                                        color: Colors.black)),
+                                                        color: Colors.black,
+                                                        fontSize: 20.0)),
                                             value: _class,
                                             items: Classes()
                                                 .myclasses
@@ -112,11 +113,11 @@ class _EnrolmentState extends State<Enrolment> {
                                             validator: (val) => val.isEmpty
                                                 ? 'Enter Number of Boys'
                                                 : null,
-                                            keyboardType: TextInputType.text,
+                                            keyboardType: TextInputType.number,
                                             decoration:
                                                 textInputDecoration.copyWith(
-                                                    prefixIcon: FaIcon(
-                                                      FontAwesomeIcons.child,
+                                                    prefixIcon: Icon(
+                                                      Icons.child_care,
                                                       color: Colors.black,
                                                     ),
                                                     labelText: "Boys",
@@ -132,7 +133,7 @@ class _EnrolmentState extends State<Enrolment> {
                                             validator: (val) => val.isEmpty
                                                 ? 'Enter Number of Girls'
                                                 : null,
-                                            keyboardType: TextInputType.text,
+                                            keyboardType: TextInputType.number,
                                             decoration:
                                                 textInputDecoration.copyWith(
                                                     prefixIcon: Icon(
@@ -140,7 +141,7 @@ class _EnrolmentState extends State<Enrolment> {
                                                           .pregnant_woman_outlined,
                                                       color: Colors.black,
                                                     ),
-                                                    labelText: "Town",
+                                                    labelText: "Girls",
                                                     labelStyle: TextStyle(
                                                         fontFamily: 'pangolin',
                                                         color: Colors.black)),
@@ -148,11 +149,9 @@ class _EnrolmentState extends State<Enrolment> {
                                           SizedBox(
                                             height: 10.0,
                                           ),
-                                          SizedBox(
-                                            height: 10.0,
-                                          ),
                                           TextFormField(
                                             controller: _totaling,
+                                            enabled: false,
                                             validator: (val) => val.isEmpty
                                                 ? 'Enter Total'
                                                 : null,
@@ -163,7 +162,7 @@ class _EnrolmentState extends State<Enrolment> {
                                                       Icons.person_add,
                                                       color: Colors.black,
                                                     ),
-                                                    labelText: "Staff Count",
+                                                    labelText: "Totaling",
                                                     labelStyle: TextStyle(
                                                         fontFamily: 'pangolin',
                                                         color: Colors.black)),

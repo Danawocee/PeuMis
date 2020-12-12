@@ -97,7 +97,7 @@ class _HomeState extends State<Home> {
                       builder: (BuildContext context) => Enrolment()));
                 },
                 child: ListTile(
-                  title: Text('Enrollment'),
+                  title: Text('Enrolment'),
                   leading: Icon(Icons.school),
                 ),
               ),
